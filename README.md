@@ -60,4 +60,4 @@ A lightweight tool for estimating the Decryption Failure Rate (DFR) in lattice-b
 
 ## Acknowledgments
 
-This project builds upon foundational work in lattice-based cryptography analysis. Some functions are adapted from the [leaky-LWE-Estimator](https://github.com/lducas/leaky-LWE-Estimator) repository.
+This project builds upon foundational work in lattice-based cryptography analysis. Some functions are adapted from the script https://github.com/pq-crystals/security-estimates/blob/master/Kyber_failure.py.
