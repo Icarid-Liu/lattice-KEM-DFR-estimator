@@ -49,7 +49,13 @@ A lightweight tool for estimating the Decryption Failure Rate (DFR) in lattice-b
     _, P1 = calculate_DRF(Dgs_fe2_fm, q//2, n, 1)
     
     Dz = Dgs_fe2_fm
-    Dz2 = add_distribution(Dz, Dz)
+    Dabs_z = {}
+    for vi in Dz:
+        if abs(vi) not in Dabs_z:
+            Dabs_z[abs(vi)] = Dz[vi]
+        else:
+            Dabs_z[abs(vi)] += Dz[vi]
+    Dz2 = add_distribution(Dabs_z, Dabs_z)
     _, P2 = calculate_DRF(Dz2, q, 3 * n, 0)
     
     P = P1 + P2
